@@ -1,0 +1,9 @@
+Get-FileHash : 无法读取文件“D:\南工小樱\gsy哨兵2023-7-18\云台\发射机构v1.4\MS5015v2.SLDPRT”: 文件“D:\南工小樱\gsy哨
+兵2023-7-18\云台\发射机构v1.4\MS5015v2.SLDPRT”正由另一进程使用，因此该进程无法访问此文件。
+所在位置 D:\DSH\DSH\cae\part_read\run_analyze.ps1:13 字符: 9
++ $md5 = (Get-FileHash -LiteralPath $Part -Algorithm MD5).Hash.ToLower( ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ReadError: (D:\南工小樱\gsy哨兵20...MS5015v2.SLDPRT:PSObject) [Write-Error], WriteErrorEx
+cepti    on
+    + FullyQualifiedErrorId : FileReadError,Get-FileHash
+ 
