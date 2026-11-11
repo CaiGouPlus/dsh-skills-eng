@@ -1,4 +1,4 @@
-param([string]$Part = 'D:\DSH\DSH\cae\part_read\gimbal.SLDPRT')
+param([string]$Part = '%DSH_WORKSPACE%\cae\part_read\gimbal.SLDPRT')
 $ErrorActionPreference = 'Stop'
 $pia = 'D:\Program Files\SOLIDWORKS Corp\SOLIDWORKS\SolidWorks.Interop.sldworks.dll'
 Add-Type -Path $pia

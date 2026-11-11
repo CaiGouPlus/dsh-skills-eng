@@ -13,14 +13,14 @@ DSH（DeepSeek Harness）**工程 / CAE 类技能包**：机械零件建模流�
 
 ## 依赖脚本（已随包）
 
-`skills/sw-cad-verified/scripts/` 里除技能自带的 `SketchKit.cs` / `Starter.cs` / `run_starter.ps1`，还收了原本散落在 `D:\DSH\DSH\cae\` 的：
+`skills/sw-cad-verified/scripts/` 里除技能自带的 `SketchKit.cs` / `Starter.cs` / `run_starter.ps1`，还收了原本散落在 `%DSH_WORKSPACE%\cae\` 的：
 
 - `SwKit.cs`（COM 连接与实例所有权）
 - `sw-run.ps1`（编译并跑 C# 驱动的入口）
 - `part_read/`（读零件几何的探针脚本：Reader.cs / PartAnalyze.cs / minwall.py / 切片与拓扑工具等）
 
 > 二进制与中间产物（`*.SLDPRT` / `*.bmp` / `*.npy` / 大体积 tess/topo 文本 / SolidWorks API 帮助 cab）**未入库**，按需本机生成。
-> `SKILL.md` 里的绝对路径（`D:\DSH\DSH\cae\...`）是本机运行口径；恢复时把 `scripts/part_read/` 放回该位置即可。
+> `SKILL.md` 里的绝对路径（`%DSH_WORKSPACE%\cae\...`）是本机运行口径；恢复时把 `scripts/part_read/` 放回该位置即可。
 
 ## 许可与第三方
 
@@ -34,6 +34,19 @@ DSH（DeepSeek Harness）**工程 / CAE 类技能包**：机械零件建模流�
 ## 恢复方式
 
 把对应目录拷回本机后重启 DSH：
-- 插件 → `D:\DSH\<插件名>`（`crosspet` 例外：`%LOCALAPPDATA%\CrossPet\dsh-plugin-crosspet`）
+- 插件 → `%DSH_ROOT%\<插件名>`（`crosspet` 例外：`%LOCALAPPDATA%\CrossPet\dsh-plugin-crosspet`）
 - 技能 → `%USERPROFILE%\.dsh\skills\<技能名>`
 - 若插件在 profile 里以 `link:` 挂载，恢复后确认 `%USERPROFILE%\.dsh\profiles\desktop` 的链接仍指向上述路径。
+
+## 路径占位符
+
+公开版本已把本机路径替换为占位符，恢复时按本机替换回去：
+
+| 占位符 | 本机含义 |
+| --- | --- |
+| `%USERPROFILE%` | `C:\Users\<你的用户名>` |
+| `%DSH_ROOT%` | DSH 的根目录（本机 `D:\DSH`） |
+| `%DSH_WORKSPACE%` | 工作区目录（本机 `D:\DSH\DSH`） |
+| `<MACHINE-NAME>` | 计算机名 |
+
+`skills/sw-cad-verified/scripts/` 里已随包附带 `SwKit.cs` / `sw-run.ps1` / `part_read/`，可直接用；`SKILL.md` 中的 `%DSH_WORKSPACE%\cae\...` 指向本机原位置。

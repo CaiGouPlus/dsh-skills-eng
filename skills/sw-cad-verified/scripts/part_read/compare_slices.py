@@ -3,8 +3,8 @@
 import math
 import numpy as np
 
-A = r'D:\DSH\DSH\cae\part_read\out\p5015seat.tess.txt'
-B = r'D:\DSH\DSH\cae\part_read\out_rebuild\5015_seat_rebuild.tess.txt'
+A = r'%DSH_WORKSPACE%\cae\part_read\out\p5015seat.tess.txt'
+B = r'%DSH_WORKSPACE%\cae\part_read\out_rebuild\5015_seat_rebuild.tess.txt'
 
 def load(path):
     tris = []

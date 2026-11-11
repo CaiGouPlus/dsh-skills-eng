@@ -3,8 +3,8 @@
 import os
 from PIL import Image, ImageDraw, ImageFont
 
-OUT = r'D:\DSH\DSH\cae\part_read\out'
-DST = r'D:\DSH\DSH\cae\part_read\out\5015_seat_sheet.png'
+OUT = r'%DSH_WORKSPACE%\cae\part_read\out'
+DST = r'%DSH_WORKSPACE%\cae\part_read\out\5015_seat_sheet.png'
 
 FONT = r'C:\Windows\Fonts\msyh.ttc'
 FONTB = r'C:\Windows\Fonts\msyhbd.ttc'

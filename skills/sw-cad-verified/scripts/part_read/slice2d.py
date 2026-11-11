@@ -2,8 +2,8 @@ import sys, math
 import numpy as np
 from PIL import Image, ImageDraw
 
-TESS = r'D:\DSH\DSH\cae\part_read\out\p5015seat.tess.txt'
-OUT = r'D:\DSH\DSH\cae\part_read\out'
+TESS = r'%DSH_WORKSPACE%\cae\part_read\out\p5015seat.tess.txt'
+OUT = r'%DSH_WORKSPACE%\cae\part_read\out'
 
 def load(path):
     tris = []

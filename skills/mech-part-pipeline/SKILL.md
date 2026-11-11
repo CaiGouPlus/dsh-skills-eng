@@ -309,13 +309,13 @@ whenToUse: 任何机械零件的建模/复刻/分析/改型/出图任务；尤�
 | SW API 硬边界 | `sw-cad-verified` |
 | 数值对拍 | `solidcraft-verify` |
 
-根目录：`D:\DSH\DSH\sw-skill\solidworks-automation-skill-main`
+根目录：`%DSH_WORKSPACE%\sw-skill\solidworks-automation-skill-main`
 
 ---
 
 ## 6. 工具链索引
 
-**新任务先查脚本表，不要重写探针**：`D:\DSH\DSH\cae\tools\INDEX.md`
+**新任务先查脚本表，不要重写探针**：`%DSH_WORKSPACE%\cae\tools\INDEX.md`
 
 | 需求 | 直接跑 |
 |---|---|

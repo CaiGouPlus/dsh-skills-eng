@@ -1,4 +1,4 @@
-param([string]$List = 'D:\DSH\DSH\cae\part_read\parts.txt')
+param([string]$List = '%DSH_WORKSPACE%\cae\part_read\parts.txt')
 $ErrorActionPreference = 'Stop'
 $pia = 'D:\Program Files\SOLIDWORKS Corp\SOLIDWORKS\SolidWorks.Interop.sldworks.dll'
 Add-Type -Path $pia

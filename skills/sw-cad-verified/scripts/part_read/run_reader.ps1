@@ -1,5 +1,5 @@
 param(
-    [string]$Part = 'D:\DSH\DSH\cae\part_read\part.SLDPRT'
+    [string]$Part = '%DSH_WORKSPACE%\cae\part_read\part.SLDPRT'
 )
 
 $ErrorActionPreference = 'Stop'

@@ -102,7 +102,7 @@ check_parameters {"set":{"L":"140 mm"}}          # 试完自动还原，给体�
 
 | 项 | 值 |
 |---|---|
-| CLI | `D:\DSH\downloads\solidcraft-bin\app\solidcraft-0.30.1-windows-x64-portable\solidcraft-cli.exe` |
+| CLI | `%DSH_ROOT%\downloads\solidcraft-bin\app\solidcraft-0.30.1-windows-x64-portable\solidcraft-cli.exe` |
 | 无头 | `solidcraft-cli.exe mcp --headless --allow-path <目录>` |
 | 驱动 GUI | 先 `solidcraft.exe --control 7878`，再 `mcp --connect 127.0.0.1:7878` |
 | 文件沙箱 | 只能读写 `--allow-path` 给的目录（home/temp 内非隐藏目录之外都要显式给） |
@@ -126,6 +126,6 @@ python scripts/probe.py --exe <...> --work <...> --selftest   # 三条回归用�
   本技能只负责"再算一遍，给一个独立数字"；要不要算、算完怎么讲、图怎么画，交回它们。
 - **`sw-cad-verified`** —— SolidWorks 建模/装配的已验证动作集。本技能是它的"数值对拍"补充：SW 回的 bbox/体积可疑时，用 SolidCraft 算一遍再判断。
   - 特别提醒（2026-11 踩过）：SW 里 `GetPartBox` 回读的跨度与设计值差 1000 倍 = **单位坑**（草图坐标是米，程序里按 mm 传了），先去查 `sw-cad-verified` 第 15 节，不要当成实体异常。
-- **`D:\DSH\DSH\sw-skill\solidworks-automation-skill-main`** —— 更完整的 SW API 手册（references/assembly.md、part-modeling.md）。
+- **`%DSH_WORKSPACE%\sw-skill\solidworks-automation-skill-main`** —— 更完整的 SW API 手册（references/assembly.md、part-modeling.md）。
 - **真实参考装配体**：`D:\南工小樱\舵\轮组V1.5.SLDASM`（板 6/10 mm、轴承 61804-2Z、M3/M4 紧固件）。
 - **TiddlyWiki**：`SolidWorks 自动化·配合与单位踩坑`。

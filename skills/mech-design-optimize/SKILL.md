@@ -96,10 +96,10 @@ whenToUse: 整机或机构级的设计与优化（从需求到图纸）；判断
 | 流程权威页、七阶段与门禁全文 | wiki「机械设计优化流程·七阶段与门禁」 |
 | 需求分类与五张表 | wiki「需求分类·四必填与两常有」 |
 | 机械原理 / 机械设计 / 材料 / 互换性 / 制图 | wiki `MECH/08`…`MECH/11` 各章节总览 |
-| 制造规则（壁厚/孔边距/底孔/倒角） | `D:\DSH\DSH\sw-skill\solidworks-automation-skill-main\subskills\solidworks-vibecad\knowledge\manufacturing_rules.yaml` |
-| DFM 自动检查 | `D:\DSH\DSH\sw-skill\solidworks-automation-skill-main\scripts\design_rule_check.py` |
-| 工程图 | `D:\DSH\DSH\sw-skill\solidworks-automation-skill-main\subskills\solidworks-engineering-drawing\SKILL.md` |
-| 零件工具链 | `D:\DSH\DSH\cae\tools\INDEX.md` |
+| 制造规则（壁厚/孔边距/底孔/倒角） | `%DSH_WORKSPACE%\sw-skill\solidworks-automation-skill-main\subskills\solidworks-vibecad\knowledge\manufacturing_rules.yaml` |
+| DFM 自动检查 | `%DSH_WORKSPACE%\sw-skill\solidworks-automation-skill-main\scripts\design_rule_check.py` |
+| 工程图 | `%DSH_WORKSPACE%\sw-skill\solidworks-automation-skill-main\subskills\solidworks-engineering-drawing\SKILL.md` |
+| 零件工具链 | `%DSH_WORKSPACE%\cae\tools\INDEX.md` |
 
 **成本不自己估**：真要做成本取舍，向用户要真实单价/工时/历史报价；没报价只做非成本取舍（工序更少 ≠ 更便宜）。
 

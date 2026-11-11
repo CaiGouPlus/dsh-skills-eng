@@ -3,7 +3,7 @@
 import math
 import numpy as np
 
-TESS = r'D:\DSH\DSH\cae\part_read\out\p5015seat.tess.txt'
+TESS = r'%DSH_WORKSPACE%\cae\part_read\out\p5015seat.tess.txt'
 
 def load(path):
     tris = []

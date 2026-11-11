@@ -4,8 +4,8 @@ import math
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-TESS = r'D:\DSH\DSH\cae\part_read\out\p5015seat.tess.txt'
-OUT = r'D:\DSH\DSH\cae\part_read\out\5015_layers.png'
+TESS = r'%DSH_WORKSPACE%\cae\part_read\out\p5015seat.tess.txt'
+OUT = r'%DSH_WORKSPACE%\cae\part_read\out\5015_layers.png'
 FONT = r'C:\Windows\Fonts\msyh.ttc'
 SCALE = 6.0
 

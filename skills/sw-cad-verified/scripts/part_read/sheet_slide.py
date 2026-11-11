@@ -6,8 +6,8 @@
 import os
 from PIL import Image, ImageDraw, ImageFont
 
-OUT = r'D:\DSH\DSH\cae\part_read\out'
-RB = r'D:\DSH\DSH\cae\rebuild'
+OUT = r'%DSH_WORKSPACE%\cae\part_read\out'
+RB = r'%DSH_WORKSPACE%\cae\rebuild'
 DST = os.path.join(OUT, 'slide_sheet.png')
 
 FONT = r'C:\Windows\Fonts\msyh.ttc'

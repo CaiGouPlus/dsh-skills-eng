@@ -1,7 +1,7 @@
 import numpy as np
 rng=np.random.default_rng(7)
 T=[]
-for line in open(r'D:\DSH\DSH\cae\part_read\out\p5015seat.tess.txt',encoding='utf-8-sig'):
+for line in open(r'%DSH_WORKSPACE%\cae\part_read\out\p5015seat.tess.txt',encoding='utf-8-sig'):
     p=line.strip().split('|')
     if len(p)!=5: continue
     T.append([[float(x)/1000.0 for x in q.split(',')] for q in p[1:4]])

@@ -7,7 +7,7 @@
 #
 # USAGE
 #   powershell -NoProfile -ExecutionPolicy Bypass -File sw-run.ps1 `
-#       -Script D:\DSH\DSH\cae\part_read\run_reader.ps1 `
+#       -Script %DSH_WORKSPACE%\cae\part_read\run_reader.ps1 `
 #       -ScriptArgs '-Part','D:\x\part.SLDPRT' `
 #       -TimeoutSec 300
 #

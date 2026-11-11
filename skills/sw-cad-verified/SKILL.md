@@ -105,7 +105,7 @@ ISldWorks sw = new SldWorks();
 ```
 
 **Python** 也能连（`comtypes` 1.4.17 实测可用），但**裸 comtypes 写法没有逐行验证**；已验证的是本机封装：
-`D:\DSH\DSH\sw-skill\solidworks-automation-skill-main\scripts\sw_connect.py`（`SolidWorksSession` / `connect_solidworks`）。
+`%DSH_WORKSPACE%\sw-skill\solidworks-automation-skill-main\scripts\sw_connect.py`（`SolidWorksSession` / `connect_solidworks`）。
 要用裸 comtypes 就把下面 C# 的规则原样搬过去——**坑与语言无关**。
 
 > 本文代码片段一律 **C# + PIA**：这是本机验证得最透的一条路。
@@ -129,7 +129,7 @@ New-Object -ComObject SldWorks.Application   # → 0x8002802B TYPE_E_ELEMENTNOTF
 
 再叠加：外层超时把进程 kill 掉时 `finally` 不执行 → **隐藏孤儿实例**留下，占住单实例锁。此后双击任何文件都"打开成功但看不见"，用户会以为是文件关联坏了（实测排查了两天）。
 
-**统一改用 `D:\DSH\DSH\cae\SwKit.cs`：**
+**统一改用 `%DSH_WORKSPACE%\cae\SwKit.cs`：**
 
 ```csharp
 bool created;
@@ -149,13 +149,13 @@ try {
 4. 批量任务**一律走 wrapper**（它带超时，且子进程被 kill 后父进程仍会收尾）：
 
    ```powershell
-   powershell -NoProfile -ExecutionPolicy Bypass -File D:\DSH\DSH\cae\sw-run.ps1 `
-       -Script D:\DSH\DSH\cae\part_read\run_reader.ps1 `
+   powershell -NoProfile -ExecutionPolicy Bypass -File %DSH_WORKSPACE%\cae\sw-run.ps1 `
+       -Script %DSH_WORKSPACE%\cae\part_read\run_reader.ps1 `
        -ScriptArgs '-Part','D:\x\part.SLDPRT' -TimeoutSec 300
    ```
 
    任何被中断/超时的自动化，事后补一次：
-   `powershell -NoProfile -ExecutionPolicy Bypass -File D:\DSH\DSH\cae\sw-sweep.ps1 -Apply`
+   `powershell -NoProfile -ExecutionPolicy Bypass -File %DSH_WORKSPACE%\cae\sw-sweep.ps1 -Apply`
 
 `sw-sweep.ps1` 只关「有文档框架但 `WS_VISIBLE=0`、且标题不含 `*`」的实例；有可见窗口或有未保存改动的**一律不动**。
 
@@ -944,7 +944,7 @@ int ret = mgr.FullyDefineSketch(true, false, 0, true, 1, null, 1, null, 1, 1);
 | 装配 / 配合 / 干涉 | `references/assembly.md` | `sw_assembly.py` |
 | 万用症状表（30+ 条） | `references/troubleshooting.md` | — |
 
-> 根目录：`D:\DSH\DSH\sw-skill\solidworks-automation-skill-main`
+> 根目录：`%DSH_WORKSPACE%\sw-skill\solidworks-automation-skill-main`
 
 **关键数值表——直接引用，不要自己编**（`vibecad/knowledge/manufacturing_rules.yaml`）：
 
@@ -982,7 +982,7 @@ CNC 板件默认：最小厚 **4.0** / 默认厚 8.0 / 外角 **R6** / 边倒角
 
 ### 18.2 症状路由表（比通读整本手册快 10 倍）
 
-> 外部手册根目录：`D:\DSH\DSH\sw-skill\solidworks-automation-skill-main`
+> 外部手册根目录：`%DSH_WORKSPACE%\sw-skill\solidworks-automation-skill-main`
 
 | 你现在的症状 | 先查这里 |
 |---|---|
